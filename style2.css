@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(120deg,#2980b9,#8e44ad);;
+  }
+  
+  .app {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    /*
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    */
+  }
+  
+  .app > .screen {
+    display: none;
+  }
+  
+  .app > .screen.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .screen .form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .screen .form-input {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .screen h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #333;
+    font-weight: 700;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  
+  .screen .form-input label {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .screen .form-input p {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    color: red;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  /*  .screen .form-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid lightgrey;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+  }*/
+  
+  .screen .form-input input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border: 2px solid #e1e1e1;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+  }
+  
+  .screen .form-input button {
+    width: 25%;
+    padding: 10px;
+    background-color: #0084ff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: background-color 0.2s ease-in-out;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .screen .form-input button:hover {
+    background-color: #0071e3;
+  }
+
+  /*chunk on top*/
+  .chat-screen .header{
+    background: #0084ff;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+  }
+  /*this is chatroom name colour*/
+  .chat-screen .header .logo{
+    font-size: 18px;
+    color: #eee;
+    font-weight: 600;
+  }
+  /*exit button*/
+  .chat-screen .header button{
+    padding: 5px 10px;
+    border: 1px solid #eee;
+    background: white;
+    color: #0084ff;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .chat-screen .messages{
+    width: 100%;
+    height: calc(100% - 100px);
+    background: #f5f5f5;
+    overflow: auto;
+  }
+  
+  .chat-screen .messages .message{
+    display: flex;
+    padding: 10px;
+  }
+  
+  .chat-screen .messages .message > div{
+    max-width: 80%;
+    background: white;
+    box-shadow: 0px 0px 20px 5px rbga(0,0,0,0.05);
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .chat-screen .messages .message.my-message{
+    justify-content: flex-end;
+  }
+  .chat-screen .messages .message.other-message{
+    justify-content: flex-start;
+  }
+
+  .chat-screen .messages .message .name{
+    font-size: 13px;
+    color:#555;
+    margin-bottom: 5px;
+  }
+  .chat-screen .messages .message .text{
+    word-wrap: break-word;
+  }
+  .chat-screen .messages .update{
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+  }
+  
+  .chat-screen .typebox {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-screen .typebox input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .chat-screen .typebox button {
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0084ff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+  }
