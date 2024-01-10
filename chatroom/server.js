@@ -23,7 +23,7 @@ io.on("connection", function(socket){
         }
 
     })
-    socket.on('exituser', function(username){
+    /*socket.on('exituser', function(username){
         socket.broadcast.emit("update", username + " left the conversation");
         if(socket.client.conn.server.clientsCount == 1){
             socket.broadcast.emit("update", socket.client.conn.server.clientsCount + " user currently connected" );
@@ -31,7 +31,7 @@ io.on("connection", function(socket){
         else{
         socket.broadcast.emit("update", socket.client.conn.server.clientsCount + " users currently connected" );
         }
-    })
+    })*/
     socket.on('chat', function(message){
         socket.broadcast.emit("chat", message);
     })
